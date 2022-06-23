@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>MIS - Home Page</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-----------------------Header------------------------------>
+        <div class="header">
+            <div class="logo-field">
+                <img src="img/logo.png" alt="none">
+                <p id="logo_name">MIS</p>
+            </div>
+            <ul class="links-field">
+                <li><a href="#ABOUT-US">About Us</a></li>
+                <li><a href="#STATISTIC">Statistic</a></li>
+                <li><a href="#CONTACT">Contacts</a></li>
+                <li id="login-button"><a href="pages/registration.php">Login</a></li>
+            </ul>
+        </div>
+
+        <!-----------------------Introduction----------------------->
+        <div class="introduction" id="INTRODUCTION">
+            <div class="container">
+                <div class="block-title">
+                    <p>People should know <br> how to cure themself</p>
+                </div>
+            </div>
+        </div>
+
+        <!-------------------------About US------------------------->
+        <div class="about-us" id="ABOUT-US">
+            <div class="container">
+                <div class="block-title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h2>What`s MIS represents?</h2>
+                    <p>Medical Information System (MIS) for complex automation of the main processes of medical institutions of any type: clinics, hospitals with inpatient departments, medical center, private clinic, laboratory.</p>
+                    <p>The modular structure of the system allows you to adjust and adapt it to the specifics of work and specific needs of the medical institution without the need to reorganize existing business processes. There is no need to stop the clinic to implement MIS, and training staff to work with it will be easier and faster.</p>
+                    
+                </div>
+                <div class="slider"></div>
+            </div>
+        </div>
+
+        <!-----------------------Statistic------------------------------>
+        <div class="statistic" id="STATISTIC">
+            <div class="container">
+                <div class="block-title">
+                    <h1>Statistic</h1>
+                </div>
+                <div class="content">
+                    <div class="slide-container swiper">
+                        <div class="slide-content">                                
+                            <div class="card-wrapper swiper-wrapper">
+
+                                <!--Slide 1-->
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <div class="card-image">
+                                            <img class="card-img" src="img/user-icon.png" alt="none">
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-info">5k<br>Users</p>
+                                    </div>
+                                </div>
+
+                                <!--Slide 2-->
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <div class="card-image">
+                                            <img class="card-img" src="img/doctor-icon.png" alt="none">
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-info">100 <br> Doctors</p>
+                                    </div>
+                                </div>
+
+                                <!--Slide 3-->
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <div class="card-image">
+                                            <img class="card-img" src="img/record-icon.png" alt="none">
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-info">10k<br>Records</p>
+                                    </div>
+                                </div>
+
+                                <!--Slide 4-->
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <div class="card-image">
+                                            <img class="card-img" src="img/hospital-icon.png" alt="none">
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-info">12<br>Med. <br>Institutions</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-next swiper-navBtn"></div>
+                        <div class="swiper-button-prev swiper-navBtn"></div>
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------Contact------------------------------>
+        <div class="contact" id="CONTACT">
+            <div class="container">
+                <div class="block-title">
+                    <h1>Contact us</h1>
+                </div>
+                <div class="content">
+                    <div class="send-message">
+                        <h2>Send us a message:</h2>
+                        <form action="#">
+                            <input class="form-email" type="text" placeholder="Your email:" name="email" required><br>
+                            <textarea class="form-text" name="text" placeholder="Enter Your message" required></textarea>
+                            <div class="form-button">
+                                <a href="#" class="send-button">Send</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info-field">
+                        <h2>Address:</h2> 
+                            <div class="info-content">
+                                <p>м. Львів, вул. Наукова, 8</p>
+                                <p>м. Тернопіль, вул. Оболоня, 49</p>
+                                <p>м. Київ, вул. Антоновича, 172</p>
+                            </div>
+                        <h2 id="cont">Contacts:</h2>
+                            <div class="info-content">
+                                <div class="telephone">
+                                    <p>Tel:</p>
+                                    <div class="numbers"> <a href="tel:+380961848000">+380961848000</a><br><a href="tel:+380631848000">+380631848000</a></div>
+                                </div>
+                                <p>Email: mis@gmail.com</p>
+                                <div class="soc-media">
+                                    <a href="https://www.facebook.com"><img src="img/facebook-logo.png" alt="facebook"></a>
+                                    <a href="https://www.instagram.com"><img src="img/insta-logo.png" alt="instagram"></a>
+                                    <a href="https://t.me/socialfund"><img src="img/telegram-logo.png" alt="mail"></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------Footer------------------------------>
+        <div class="footer">
+            <div class="container">
+                <ul class="footer_field">
+                    <li>
+                        Copyright &copy; Medical Information System | 2022
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a> &middot; <a href="">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<!--Swiper JS-->
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/home.js"></script>
+
+</html>

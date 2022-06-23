@@ -1,0 +1,492 @@
+/*Zeroing CSS*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------*/
+
+body{
+  position: static;
+  width: 100%;
+}
+
+
+.content{
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.content .container{
+  position: relative;
+  padding: 0px;
+  width: calc(100%-240px);
+  height: calc(100%-70px);
+  margin-left: 240px;
+  padding-top: 70px;
+  z-index: 0;  
+}
+
+.list-unstyled{
+  margin-bottom: 0px;
+}
+
+/*-----------------------------------------------Header-------------------------------------------------*/
+
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: rgb(0, 0, 0); 
+}
+
+.header .container{
+  display: flex;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 70px;
+  min-width: 100%;
+}
+
+/*--------------------------------------------Header Logo-----------------------------------------------*/
+
+.logo_field{
+  display: flex;
+  margin: 0px;
+  padding: 0px 35px;
+  align-items: center;
+  max-width: 240px;
+  width: 100%;
+
+}
+
+.logo_field img{
+  width: 60px;
+}
+
+#logo_name{
+  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  margin-left: 5px;
+  font-style: normal;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: whitesmoke;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+/*--------------------------------------------Dropdown Menu---------------------------------------------*/
+
+.profile_field{
+  display: flex;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+  background-color: black ;
+  margin: 0px;
+  padding: 0px 0px;
+  align-items: center;
+}
+
+.profile_field{
+  display: flex;
+  margin-left: auto;
+  height: 100%;
+  align-items: center;
+  line-height: 70px;
+  justify-content: flex-end;
+}
+
+.profile_field .toogle_bar{
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+}
+
+.profile_field .toogle_bar li{
+  position: relative;
+  display: flex;                            
+  align-items: center;
+  list-style: none;
+}
+
+.profile_field .toogle_bar li a{
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.profile_field .toogle_bar li .bxs-chevron-down{
+  height: 100%;
+  line-height: 70px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.profile_field .toogle_bar li .bxs-chevron-up{
+  height: 100%;
+  line-height: 70px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.profile_field .toogle_bar .dropmenu{
+  padding-left: 0;
+  position: absolute;
+  top: 85px;
+  right: 0;
+  background-color: rgb(220, 220, 220);
+  border-radius: 7px;
+  border: solid 1px gray;
+  width: 300px;
+  display: none;
+}
+
+.profile_field .toogle_bar .dropmenu::before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  right: 26px;
+  top: -6px;
+  border: solid 1px gray;
+  background-color: rgb(220, 220, 220);
+  transform: rotate(45deg);
+}
+
+.profile_field .toogle_bar .dropmenu li{
+  height: 100%;
+  line-height: 35px;
+  align-items: center;
+}
+
+.profile_field .toogle_bar .dropmenu li a{
+  font-family: 'Poppins', sans-serif;
+  color: black;                                                   
+  height: auto;
+  width: 100%;
+}
+
+.profile_field .toogle_bar .dropmenu li .bx{
+  height: 100%;
+  align-items: center;
+  margin-left: 14px;
+}
+
+.profile_field .toogle_bar .dropmenu.dropmenu_active {
+  display: block;
+}
+
+.profile_field .toogle_bar .dropmenu li:hover{
+  background-color: rgb(200, 200, 200);
+}
+
+.profile_field .toogle_bar .dropmenu .prof_info li:hover{
+  background-color: rgb(220, 220, 220);
+}
+
+
+.profile_field .toogle_bar .dropmenu .prof_info{
+  width: 100%;
+  display: flex;
+  height: 90px;
+  padding-left: 0;
+  border-radius: 7px;
+  z-index: 20;
+  background-color: rgb(220, 220, 220);
+}
+
+.profile_field .toogle_bar .dropmenu .prof_info li{
+  width: 100%;
+}
+
+#prof_photo{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prof_photo img{
+  width: 65px;
+}
+
+#prof_status{
+  width: auto;
+  display: block;
+  position: relative;
+  margin-left: 5px;
+}
+
+#prof_status h1, h2, h3{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+}
+
+#prof_status h1{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px 0px;
+  margin-top: 17px;
+}
+
+#prof_status i{
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  color: black;
+}
+
+#prof_status h1 i{
+  margin-right: 5px;
+}
+
+#prof_status h2{
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0px;
+  color: #a310b5;
+}
+
+#prof_status h3{
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0px;
+  color: #32cd32;
+}
+
+/*-----------------------------------------------Footer-------------------------------------------------*/
+
+.footer{
+  display: block;
+  position: fixed;
+  width: 1300px;
+  bottom: 0;
+  flex-grow: 0; 
+  flex-shrink: 0;
+}
+
+.footer .container{
+  max-height: 64px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+}
+
+.footer_field{
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px;
+  margin-top: 20px;
+  padding: 20px 30px;
+  background: rgb(243, 243, 243);
+  color: grey;
+}
+
+.footer_field a{
+  color: grey;
+  text-decoration: none;
+}
+
+.footer_field a:hover{
+  color: black;
+}
+
+/*-----------------------------------------------Sidebar------------------------------------------------*/
+
+.sidebar{
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 70px;
+    left: 0px;
+    height: 100%;
+    width: 240px;
+    background: black;
+    padding: px 0px;
+    z-index: 1;
+}
+
+.sidebar .container{
+  position: relative;
+  margin: 0px auto;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.sb-nav_list {
+  position: relative;
+  margin: 0px;
+  padding: 2px 8px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.log_out_a{
+  position: relative;
+  display: block;
+  margin-top: 425px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.log_out_u{
+    position: relative;
+    display: block;
+    margin-top: 475px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.log_out ul{
+  position: relative;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+li{
+    list-style-type: none;
+}
+
+.sidebar ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    line-height: 42px;
+    margin: 8px 0px;
+}
+
+.sidebar ul li a{
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.6s ease;
+    border-radius: 10px;
+}
+
+.sidebar ul li a i{
+    margin: 0px 15px 0px 10px;
+    size: 30px;
+}
+
+.sidebar ul li a:hover{
+    background: white;
+    color: black;
+}
+
+/*-----------------------------------------------Home Content------------------------------------------------*/
+
+.home_title{
+  margin: 0px;
+  padding: 0px;
+  padding-top: 240px;
+  margin-bottom: 245px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.home_title h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: rgb(167, 167, 167);
+  margin-bottom: 0px;
+}
+
+.home_title h1 {
+  font-size: 48px;
+}
+
+.home_title h1 i {
+  color: rgb(100, 100, 100);
+  font-style: normal;
+}
+
+.home_title h2 {
+  font-size: 36px;
+  font-weight: bold;
+}

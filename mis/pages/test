@@ -1,0 +1,32 @@
+<?php
+
+include '../functions/db_conn.php';
+
+$sql = "SELECT `doctors`.`id`, `doctors`.`doctor_name`, `doctors`.`doctor_surname`, `specialization`.`doctor_spec`
+        FROM `doctors` 
+	    LEFT JOIN `specialization` ON `doctors`.`spec_id` = `specialization`.`id`
+        ORDER BY `doctors`.`id` ASC";
+
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+     
+$doctors = array();     
+
+foreach($result as $row){
+    array_push($doctors, $row);
+}
+
+function doctor_list()
+	{
+        $row = mysqli_fetch_assoc($result);
+		$html = '
+			<option value="">--Select Doctor--</option>
+		';
+		foreach($doctors as $row)
+		{
+			$html = '<option value="'["id"]'">'$data["doctor_spec"]' - '$data["doctor_name"]  $data["doctor_surname"]'</option>';
+		}
+		return $html;
+	}
+
+?>
